@@ -24,6 +24,11 @@ label, input {
     display: block;
 }
 
+.info {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
 .gender-block > input, .gender-block > label {
     display: inline-block;
 }
@@ -79,7 +84,6 @@ h1 {
     color: whitesmoke;
     background-image: url(../images/button.png);
     background-repeat: no-repeat;
-    background-size: cover 100%;
     background-position: center;
     border-radius: 5px;
 }

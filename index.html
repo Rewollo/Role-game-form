@@ -1,8 +1,8 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <title> Title </title>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -13,8 +13,8 @@
             <div class="wrapper">
                 <div id="character">
                     <h2> Данные персонажа </h2>
-                    <label for="character-name"><p> Имя персонажа: </p><input type="text" id="character-name" class="character-info"></label>
-                    <label for="character-age"><p> Возраст персонажа: </p><input type="number" id="character-age" class="character-info"></label>
+                    <label for="character-name" class="info"> Имя персонажа: <input type="text" id="character-name" class="character-info"></label>
+                    <label for="character-age" class="info"> Возраст персонажа: <input type="number" id="character-age" class="character-info"></label>
                     <div class="gender-block">
                         <p> Выберите пол персонажа: </p>
                         <div class="gender-flex">
@@ -67,17 +67,17 @@
                         <button type="button" id="random" onclick="random_stats ()"></button>
                         <span id="stats_sum"></span>
                     </div>
-                    <label for="quenta">
-                        <p> История персонажа <br> (по желанию): </p>
+                    <label for="quenta" class="info">
+                        История персонажа <br> (по желанию):
                         <textarea name="character-quenta" id="quenta" maxlength="500" rows="5" cols="20" 
                         placeholder="Напишите краткую (не более 500 символов) историю персонажа."></textarea>
                     </label>
                 </div>
                 <div id="player">
                     <h2> Данные игрока </h2>
-                    <label for="player-name"><p> Имя: </p><input type="text" id="player-name" class="player-info" placeholder="Введите ваше имя"></label>
-                    <label for="player-email"><p> E-mail: </p><input type="email" id="player-email" class="player-info" placeholder="Введите ваш e-mail"></label>
-                    <label for="player-phone"><p> Телефон: </p><input type="number" id="player-phone" class="player-info" placeholder="Ваш номер телефона"></label>
+                    <label for="player-name" class="info"> Имя: <input type="text" id="player-name" class="player-info" placeholder="Введите ваше имя"></label>
+                    <label for="player-email" class="info"> E-mail: <input type="email" id="player-email" class="player-info" placeholder="Введите ваш e-mail"></label>
+                    <label for="player-phone" class="info"> Телефон: <input type="number" id="player-phone" class="player-info" placeholder="Ваш номер телефона"></label>
                 </div>
             </div>
             <div class="button-wrap">
