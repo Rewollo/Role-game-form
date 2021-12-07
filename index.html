@@ -1,0 +1,92 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title> Title </title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+        <h1> Заявка на участие в игре </h1>
+        <form>
+            <div class="wrapper">
+                <div id="character">
+                    <h2> Данные персонажа </h2>
+                    <label for="character-name"><p> Имя персонажа: </p><input type="text" id="character-name" class="character-info"></label>
+                    <label for="character-age"><p> Возраст персонажа: </p><input type="number" id="character-age" class="character-info"></label>
+                    <div class="gender-block">
+                        <p> Выберите пол персонажа: </p>
+                        <div class="gender-flex">
+                            <label for="gender1"> Мужской <input type="radio" name="gender" class="gender" id="gender1" value="Мужской" checked></label>
+                            <label for="gender2"> Женский <input type="radio" name="gender" class="gender" id="gender2" value="Женский"></label>
+                        </div>
+                    </div>
+                    <div class="char-race">
+                        <p> Выберите расу персонажа: </p>
+                        <select name="character-race" id="characters-races" size="1">
+                            <option value="Человек"> Человек </option>
+                            <option value="Эльф"> Эльф </option>
+                            <option value="Гном"> Гном </option>
+                            <option value="Орк"> Орк </option>
+                        </select>
+                    </div>
+                    <div class="char-class">
+                        <p> Выберите класс персонажа: </p>
+                        <select name="character-class" id="characters-class" size="1">
+                            <option value="Воитель"> Воитель </option>
+                            <option value="Разбойник"> Разбойник </option>
+                            <option value="Волшебник"> Волшебник </option>
+                        </select>
+                    </div>
+                    <div class="stats">
+                        <p>
+                            Установите параметры персонажа<br>
+                            (не более 25 в сумме):
+                        </p>
+                        <label for="stat1"> Сила: <input type="range" class="range" id="stat1" min="1" max="10" list="stat" value="1"
+                            oninput = "statSum ()"></label>
+                        <label for="stat2"> Ловкость: <input type="range" class="range" id="stat2" min="1" max="10" list="stat" value="1"
+                            oninput="statSum ()"></label>
+                        <label for="stat3"> Выносливость: <input type="range" class="range" id="stat3" min="1" max="10" list="stat" value="1"
+                            oninput="statSum ()"></label>
+                        <label for="stat4"> Интеллект: <input type="range" class="range" id="stat4" min="1" max="10" list="stat" value="1"
+                            oninput="statSum ()"></label>
+                        <datalist id="stat">
+                            <option value="1">
+                            <option value="2">
+                            <option value="3">
+                            <option value="4">
+                            <option value="5">
+                            <option value="6">
+                            <option value="7">
+                            <option value="8">
+                            <option value="9">
+                            <option value="10">
+                        </datalist>
+                        <button type="button" id="random" onclick="random_stats ()"></button>
+                        <span id="stats_sum"></span>
+                    </div>
+                    <label for="quenta">
+                        <p> История персонажа <br> (по желанию): </p>
+                        <textarea name="character-quenta" id="quenta" maxlength="500" rows="5" cols="20" 
+                        placeholder="Напишите краткую (не более 500 символов) историю персонажа."></textarea>
+                    </label>
+                </div>
+                <div id="player">
+                    <h2> Данные игрока </h2>
+                    <label for="player-name"><p> Имя: </p><input type="text" id="player-name" class="player-info" placeholder="Введите ваше имя"></label>
+                    <label for="player-email"><p> E-mail: </p><input type="email" id="player-email" class="player-info" placeholder="Введите ваш e-mail"></label>
+                    <label for="player-phone"><p> Телефон: </p><input type="number" id="player-phone" class="player-info" placeholder="Ваш номер телефона"></label>
+                </div>
+            </div>
+            <div class="button-wrap">
+                <button type="button" class="button" id="get-character" value="Создать персонажа" onclick="get_character()"> Создать персонажа </button>
+                <button type="button" class="button" id="show-character" onclick="show_character()"> Посмотреть персонажа </button>
+                <button type="submit" class="button" id="submit"> Отправить </button>
+            </div>
+        </form>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+</html>

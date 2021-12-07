@@ -1,0 +1,186 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover, 100%;
+    background-position: center;
+    min-height: 100%;
+    font-weight: 700;
+    font-size: 18px;
+    text-shadow: 1px 1px 2px white;
+    padding-top: 5%;
+}
+
+label, input {
+    display: block;
+}
+
+.gender-block > input, .gender-block > label {
+    display: inline-block;
+}
+
+.wrapper > div {
+    display: inline-block;
+}
+
+.wrapper {
+    width: 60%;
+    margin: auto 20%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.gender-flex {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+}
+
+#character, #player {
+    margin: 20px;
+    width: 320px;
+}
+
+h1, h2 {
+    text-shadow: 1px 1px 2px white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.button-wrap {
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px;
+    width: 60%;
+    margin: auto 20%;
+}
+
+.button-wrap > button {
+    width: 200px;
+    height: 50px;
+    margin: 20px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    color: whitesmoke;
+    background-image: url(../images/button.png);
+    background-repeat: no-repeat;
+    background-size: cover 100%;
+    background-position: center;
+    border-radius: 5px;
+}
+
+#random {
+    background-image: url(../images/dice.png);
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 5px;
+}
+
+#stats_sum {
+    width: 50px;
+    height: 50px;
+    font-size: 45px;
+}
+
+input, select {
+    height: 30px;
+}
+
+input, select, textarea {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    width: auto;
+    border-radius: 5px;
+}
+
+input, textarea {
+    padding: 5px;
+}
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    main {
+        background-attachment: fixed;
+        min-height: 800px;
+    }
+
+    .wrapper {
+        justify-content: space-around;
+        align-content: space-around;
+        width: auto;
+    }
+
+    h2 {
+        font-size: large;
+    }
+
+    h1 {
+        font-size: larger;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    main {
+        background-attachment: fixed;
+        min-width: 240px;
+        min-height: 400px;
+        padding: 15px;
+    }
+
+    .wrapper {
+        display: block;
+        width: auto;
+        margin: auto;
+        overflow: scroll;
+    }
+
+    h1, h2 {
+        text-align: left;
+    }
+
+    h2 {
+        font-size: large;
+    }
+
+    h1 {
+        font-size: larger;
+        margin-bottom: 0;
+    }
+
+    .button-wrap {
+        display: block;
+        text-align: center;
+        width: 240px;
+        margin: 5px;
+    }
+
+    .button-wrap > button {
+        display: block;
+        margin: auto;
+        height: 50px;
+        margin: 5px;
+    }
+
+    #character, #player {
+        margin: 10px;
+        width: 240px;
+    }
+}
