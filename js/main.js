@@ -102,10 +102,33 @@ function show_character() {
     }
 }
 
-//Здесь реализовал экранирование символов и цифр в поле ввода имени персонажа через регулярные выражения. Пока использую только простые шаблоны,
-//специальные символы в регулярных выражениях ещё сложноваты для понимания.
+//Здесь реализовал экранирование символов и цифр в поле ввода имени персонажа через регулярные выражения.
 let nameReplace = document.querySelector('#character-name');
-let reg = /[!@#$%^&*()_+={[}|/><.,1234567890№?'";:`\\\]~]/g;
+let regName = /[\W\d/_]/g;
 nameReplace.oninput = function() {
-    this.value = this.value.replace(reg, '');
+    this.value = this.value.replace(regName, '');
 }
+
+let registration = document.getElementById('registration');
+let playerPhone = document.getElementById('player-phone');
+let phoneReplace = /[\D]/g;
+
+//Экранирование букв и символов в поле ввода телефона
+playerPhone.oninput = function() {
+    this.value = this.value.replace(phoneReplace, '');
+}
+
+//проверка на нужную длину телефона
+registration.addEventListener('submit', function lengthValid() {
+    event.preventDefault();
+
+    let isValid = true;
+    if (playerPhone.value.length != 10) {
+        alert("Введите корректный номер телефона");
+        isValid = false;
+    }
+
+    if (isValid) {
+        registration.submit();
+    }
+})
